@@ -5,18 +5,18 @@
 body {
   margin: 0;
   font-family: sans-serif;
+  background-color: whitesmoke;
 }
 
 :root {
-  --good-color: rgb(161, 208, 155);
-  --bad-color: rgb(223, 123, 98);
+  --good-color: rgb(121, 201, 110);
+  --bad-color: rgb(214, 119, 95);
   --main-font-color: rgb(60, 60, 60);
 }
 
 .App {
   height: 100vh;
   width: 100vw;
-  background-color: whitesmoke;
   padding: 1rem;
 }
 
@@ -60,10 +60,13 @@ body {
 .results {
   color: var(--main-font-color);
   text-align: left;
+  padding: 0 0 1rem 1rem;
 }
 
 .results h1 {
   color: var(--main-font-color);
+  line-height: 3.5rem;
+  border-bottom: 1px solid darkgray;
 }
 
 .results p {
@@ -73,4 +76,17 @@ body {
 .indent {
   padding-left: 2rem;
   border-left: 1px solid var(--main-font-color);
+}
+
+.score {
+  position: fixed;
+  margin: 0;
+  bottom: 0;
+  right: 0;
+  padding: 1rem;
+  font-size: 4rem;
+}
+
+.out-of {
+  font-size: 2rem;
 }

@@ -70,7 +70,7 @@ function App() {
           Search
         </button>
       </div>
-      <Result data={data} />
+      <Result apiData={data} />
     </div>
   );
 }
