@@ -1,13 +1,76 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+:root {
+  --good-color: rgb(161, 208, 155);
+  --bad-color: rgb(223, 123, 98);
+  --main-font-color: rgb(60, 60, 60);
+}
+
+.App {
+  height: 100vh;
+  width: 100vw;
+  background-color: whitesmoke;
+  padding: 1rem;
+}
+
+.top-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+.title {
+  line-height: 4rem;
+  border-bottom: 1px solid darkgray;
+  color: var(--main-font-color);
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.input {
+  width: 80%;
+  text-align: center;
+  border: none;
+  height: 3rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--main-font-color);
+}
+
+.button {
+  width: 80%;
+  background-color: rgb(156, 156, 156);
+  border: none;
+  height: 3rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: whitesmoke;
+}
+
+.results {
+  color: var(--main-font-color);
+  text-align: left;
+}
+
+.results h1 {
+  color: var(--main-font-color);
+}
+
+.results p {
+  font-size: 1.2rem;
+}
+
+.indent {
+  padding-left: 2rem;
+  border-left: 1px solid var(--main-font-color);
 }
