@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Result from "./Result";
+import Modal from "./Modal";
 
 function App() {
   const [inputText, setInputText] = useState("");
   const [data, setData] = useState({});
+  const [modal, setModal] = useState(false);
 
   // api stuff ///////////////////////////////////////////////////////
   async function fetchNutritionData(text) {
@@ -56,6 +58,15 @@ function App() {
 
   return (
     <div className="App">
+      {modal && <Modal />}
+      <button
+        onClick={() => {
+          setModal(!modal);
+        }}
+        className="modal-button"
+      >
+        ?
+      </button>
       <div className="top-container">
         <h1 className="title">Hunger Scale ⚖️</h1>
         <input

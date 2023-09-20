@@ -2,30 +2,38 @@
   box-sizing: border-box;
 }
 
+html,
 body {
   margin: 0;
-  font-family: sans-serif;
-  background-color: whitesmoke;
+  padding: 0;
 }
 
 :root {
   --good-color: rgb(121, 201, 110);
-  --bad-color: rgb(214, 119, 95);
-  --main-font-color: rgb(60, 60, 60);
+  --okay-color: rgb(243, 212, 120);
+  --bad-color: rgb(236, 134, 108);
+  --main-font-color: rgb(80, 80, 80);
 }
 
 .App {
-  height: 100vh;
-  width: 100vw;
+  font-family: sans-serif;
+  min-height: 100vh;
+  width: 100%;
   padding: 1rem;
+  background: linear-gradient(to bottom, white, whitesmoke);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
+
+/* title, input and button ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 .top-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 4rem;
+  text-align: center;
 }
 
 .title {
@@ -39,12 +47,13 @@ body {
 .input {
   width: 80%;
   text-align: center;
-  border: none;
+  border: 1px solid darkgray;
   height: 3rem;
   margin-bottom: 0.5rem;
   font-weight: bold;
   font-size: 1.2rem;
   color: var(--main-font-color);
+  border-radius: 0.2rem;
 }
 
 .button {
@@ -55,12 +64,25 @@ body {
   font-weight: bold;
   font-size: 1.2rem;
   color: whitesmoke;
+  border-radius: 0.2rem;
 }
+
+/* search results ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 .results {
   color: var(--main-font-color);
   text-align: left;
-  padding: 0 0 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1rem;
+}
+
+.results h3 {
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  text-wrap: nowrap;
+  transition: 1s;
 }
 
 .results h1 {
@@ -84,9 +106,69 @@ body {
   bottom: 0;
   right: 0;
   padding: 1rem;
-  font-size: 4rem;
+  font-size: 3rem;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  /* hack to remove 1px border on bottom that I could not find the source of */
+  /* maybe bug in chrome dev tools */
+  transform: translateY(1px);
 }
 
 .out-of {
   font-size: 2rem;
+  margin: 0;
+}
+
+/* modal */
+.modal {
+  position: fixed;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  background: linear-gradient(to bottom, white, whitesmoke);
+  max-height: 100vh;
+  overflow: auto;
+  color: var(--main-font-color);
+}
+
+.modal h1,
+.modal h3 {
+  margin: 0;
+  line-height: 2.5rem;
+}
+
+.modal-button {
+  border: none;
+  background: none;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--main-font-color);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.modal-button:hover {
+  transform: scale(1.2);
+}
+
+@media (min-width: 600px) {
+  .App {
+    flex-direction: row;
+    height: 100vh;
+  }
+
+  .top-container {
+    justify-content: center;
+  }
+
+  .results {
+    justify-content: flex-start;
+    overflow-y: scroll;
+    width: 50%;
+  }
 }
