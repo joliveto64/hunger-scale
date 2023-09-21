@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/hunger-scale/static/css/main.cb5fe3fd.css",
+    "main.js": "/hunger-scale/static/js/main.f7dd4661.js",
+    "index.html": "/hunger-scale/index.html",
+    "main.cb5fe3fd.css.map": "/hunger-scale/static/css/main.cb5fe3fd.css.map",
+    "main.f7dd4661.js.map": "/hunger-scale/static/js/main.f7dd4661.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cb5fe3fd.css",
+    "static/js/main.f7dd4661.js"
+  ]
+}
