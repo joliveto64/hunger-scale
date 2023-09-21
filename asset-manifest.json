@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/hunger-scale/static/css/main.1edc0b6a.css",
+    "main.css": "/hunger-scale/static/css/main.27d4feb3.css",
     "main.js": "/hunger-scale/static/js/main.062742af.js",
     "index.html": "/hunger-scale/index.html",
-    "main.1edc0b6a.css.map": "/hunger-scale/static/css/main.1edc0b6a.css.map",
+    "main.27d4feb3.css.map": "/hunger-scale/static/css/main.27d4feb3.css.map",
     "main.062742af.js.map": "/hunger-scale/static/js/main.062742af.js.map"
   },
   "entrypoints": [
-    "static/css/main.1edc0b6a.css",
+    "static/css/main.27d4feb3.css",
     "static/js/main.062742af.js"
   ]
 }
