@@ -75,12 +75,8 @@ export default function Result({ apiData }) {
       <div className="results">
         <h1 className="food-name">{foodName}</h1>
         <h3 style={styles} className="food-satisfaction">
-          Satisfaction rating:
-          {fullness} / 10
+          Fullness rating: {fullness} / 10
         </h3>
-        {/* <p>
-          Caloric density: <strong>{caloricDensity} kcal/g</strong>
-        </p> */}
         <p>
           Serving size (g): <strong>{data.serving_size_g}</strong>
         </p>
@@ -88,19 +84,19 @@ export default function Result({ apiData }) {
           Calories: <strong>{data.calories}</strong>
         </p>
         <p>
-          Protein: <strong>{data.protein_g}</strong>
+          Protein: <strong>{data.protein_g}g</strong>
         </p>
         <p>
-          Fat: <strong>{data.fat_total_g}</strong>
+          Fat: <strong>{data.fat_total_g}g</strong>
         </p>
         <p>
-          Carbohydrates: <strong>{data.carbohydrates_total_g}</strong>
+          Carbohydrates: <strong>{data.carbohydrates_total_g}g</strong>
         </p>
         <p className="indent">
-          Fiber: <strong>{data.fiber_g}</strong>
+          Fiber: <strong>{data.fiber_g}g</strong>
         </p>
         <p className="indent">
-          Sugar: <strong>{data.sugar_g}</strong>
+          Sugar: <strong>{data.sugar_g}g</strong>
         </p>
       </div>
     </>

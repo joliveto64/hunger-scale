@@ -20,10 +20,11 @@ body {
   min-height: 100vh;
   width: 100%;
   padding: 1rem;
-  background: linear-gradient(to bottom, white, whitesmoke);
+  background-color: whitesmoke;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  overflow-y: auto;
 }
 
 /* title, input and button ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -81,8 +82,8 @@ body {
 .results h3 {
   padding: 0.5rem;
   border-radius: 0.2rem;
-  text-wrap: nowrap;
   transition: 1s;
+  white-space: nowrap;
 }
 
 .results h1 {
@@ -124,10 +125,10 @@ body {
   min-height: 100vh;
   top: 0;
   left: 0;
-  padding: 1.5rem;
+  padding: 2rem;
   font-size: 1.2rem;
   line-height: 2rem;
-  background: linear-gradient(to bottom, white, whitesmoke);
+  background: whitesmoke;
   max-height: 100vh;
   overflow: auto;
   color: var(--main-font-color);
@@ -143,11 +144,12 @@ body {
   border: none;
   background: none;
   position: fixed;
-  top: 1rem;
-  right: 1rem;
+  top: 0.5rem;
+  right: 0.5rem;
   font-size: 1.5rem;
   font-weight: bold;
   color: var(--main-font-color);
+  opacity: 0.4;
   cursor: pointer;
   transition: 0.2s;
 }
@@ -160,6 +162,7 @@ body {
   .App {
     flex-direction: row;
     height: 100vh;
+    align-items: center;
   }
 
   .top-container {
@@ -168,7 +171,24 @@ body {
 
   .results {
     justify-content: flex-start;
-    overflow-y: scroll;
+    overflow-y: auto;
+    width: 50%;
+  }
+}
+
+@media (min-width: 960px) {
+  .App {
+    flex-direction: row;
+    height: 100vh;
+  }
+
+  .top-container {
+    justify-content: center;
+  }
+
+  .results {
+    justify-content: center;
+    overflow-y: auto;
     width: 50%;
   }
 }
